@@ -67,6 +67,19 @@ namespace CslaFastStart
                 }
             }
 
+            Console.WriteLine();
+            Console.WriteLine("Deleting existing person");
+            Csla.DataPortal.Fetch<PersonEdit>(person.Id);
+            try
+            {
+                person = Csla.DataPortal.Fetch<PersonEdit>(person.Id);
+                Console.WriteLine("Person NOT deleted");
+            }
+            catch
+            {
+                Console.WriteLine("Person succesfully deleted");
+            }
+
             Console.ReadKey();
         }
     }

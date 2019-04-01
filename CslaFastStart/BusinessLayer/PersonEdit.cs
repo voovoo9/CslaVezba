@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace BusinessLayer
         }
 
         public static readonly PropertyInfo<string> FirstNameProperty = RegisterProperty<string>(c => c.FirstName);
+        [Required]
         public string FirstName
         {
             get { return GetProperty(FirstNameProperty); }
@@ -26,6 +28,7 @@ namespace BusinessLayer
         }
 
         public static readonly PropertyInfo<string> LastNameProperty = RegisterProperty<string>(c => c.LastName);
+        [Required]
         public string LastName
         {
             get { return GetProperty(LastNameProperty); }
