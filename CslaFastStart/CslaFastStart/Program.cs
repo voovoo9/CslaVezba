@@ -11,7 +11,7 @@ namespace CslaFastStart
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ceating a new person");
+            Console.WriteLine("Creating a new person");
             var person = Csla.DataPortal.Create<PersonEdit>();
             Console.WriteLine("Enter first name: ");
             person.FirstName = Console.ReadLine();
@@ -24,7 +24,7 @@ namespace CslaFastStart
             }
             else
             {
-                Console.WriteLine("invalid entery");
+                Console.WriteLine("Invalid entry");
                 foreach (var item in person.BrokenRulesCollection)
                     Console.WriteLine(item.Description);
                 Console.ReadKey();
@@ -34,7 +34,7 @@ namespace CslaFastStart
             Console.WriteLine();
             Console.WriteLine("Updating existing person");
             person = Csla.DataPortal.Fetch<PersonEdit>(person.Id);
-            Console.Write($"Update last name [{person.LastName}]: ");
+            Console.Write($"Update first name [{person.FirstName}]: ");
             var temp = Console.ReadLine();
             if(!string.IsNullOrWhiteSpace(temp))
             {
@@ -77,7 +77,7 @@ namespace CslaFastStart
             }
             catch
             {
-                Console.WriteLine("Person succesfully deleted");
+                Console.WriteLine("Person successfully deleted");
             }
 
             Console.ReadKey();
