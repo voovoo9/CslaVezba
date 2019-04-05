@@ -94,7 +94,7 @@ namespace BusinessLayer
             var dal = new PersonDal();
             using (BypassPropertyChecks)
             {
-                dal.DeletePeson(id);
+                dal.DeletePerson(id);
             }
         }
 

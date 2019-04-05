@@ -42,7 +42,7 @@ namespace DataAccessLayer
             entity.LastName = data.LastName;
         }
 
-        public void DeletePeson(int id)
+        public void DeletePerson(int id)
         {
             var entity = GetPerson(id);
             _list.Remove(entity);
